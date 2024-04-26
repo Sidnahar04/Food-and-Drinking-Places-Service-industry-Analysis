@@ -15,24 +15,10 @@ Project Strategy
 ![image](https://github.com/Sidnahar04/Food-and-Drinking-Places-Service-industry-Analysis/assets/68987629/279228a1-1147-46f0-9050-399923e04327)
 
 ### Data Collection
-Retrieve dataset from Kaggle: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2110017101
+Retrieve dataset from Stat Canda: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2110017101
+
 Annual sample survey gathering economic data for Canada's Food Services and Drinking Places industry. Aggregated with other sources for national and provincial economic estimates. Used by businesses, governments, investors, and associations to monitor industry growth, and performance, and make informed comparisons. Administered as part of the Integrated Business Statistics Program (IBSP) to streamline reporting across industries and improve data coherence. Part of the Service Industries Program, providing financial statistics for over thirty service industry groupings.
 
-### Data Understanding
-The data dictionary of the dataset is as follows:
-
-REF_DATE - The reference year for the data.
-GEO - Geographic location where the data was collected, in this case, Canada.
-DGUID - Data Guide Unique Identifier, a unique identifier for the dataset.
-North American Industry Classification System (NAICS) - A hierarchical classification system used to classify business establishments based on their primary economic activity. The code [722] refers to the Food Services and Drinking Places industry.
-Summary statistics - The type of data being reported, such as operating revenue, operating expenses, salaries, wages, commissions, etc.
-UOM - Unit of measurement for the data, in this case, Dollars.
-UOM_ID - Unique identifier for the unit of measurement.
-SCALAR_FACTOR -	A scalar factor applied to the data.
-SCALAR_ID - Unique identifier for the scalar factor.
-VECTOR - Unique identifier for the data vector.
-VALUE - The actual value of the data point.
-DECIMALS - Number of decimal places used in reporting the data.
 
 ## Exploratory Data Analysis
 
@@ -47,6 +33,7 @@ It compares various financial metrics across different types of businesses and r
 The dashboard interface features a user-friendly design with filters conveniently positioned on the left-hand side.
 
 These filters allow users to customize their data analysis according to three main criteria:
+
 •	Year: Users can select the specific year or range of years they want to analyze, providing flexibility in examining trends over time.
 
 •	Financial Metrics: This filter enables users to choose from a variety of financial indicators or metrics to focus on, such as revenue, profit, expenses, or any other relevant financial data.
@@ -63,14 +50,20 @@ The primary visualization tools on the dashboard are a graph and a heatmap. Thes
 
 ![image](https://github.com/Sidnahar04/Food-and-Drinking-Places-Service-industry-Analysis/assets/68987629/54f3a608-05a0-4736-bc12-3a9be68ed2ca)
 
-Interpretations
-It includes the following two graphs:
+Interpretations - It includes the following two graphs:
+
 •	Analysis of Salary, Wages and Commission expenses across Canada for each business type
+
 o	Highest and Lowest: The province with the highest average salary, wages, and commission expenses appears to be Ontario, followed by Alberta and British Columbia. The province with the lowest average salary, wages, and commission expenses appears to be Prince Edward Island, followed by Newfoundland and Labrador and New Brunswick.
+
 o	Eastern vs. Western Canada: The chart suggests that the average salary, wages, and commission expenses tend to be higher in Western Canada compared to Eastern Canada. There could be several reasons for this, such as the cost of living, the types of industries that are prevalent in each region, or government regulations.
+
 •	Tree Structure to view overall info of data - The visualization aims to provide stakeholders or the audience with clear insights into:
+
 o	Regional variations in compensation.
+
 o	How different industries contribute to the overall financial landscape in Canada.
+
 o	Potential areas for further investigation or improvement in terms of compensation policies or economic development strategies.
 
 3.	Year Wise contribution of Provinces towards financial metrics
@@ -78,34 +71,56 @@ o	Potential areas for further investigation or improvement in terms of compensat
 ![image](https://github.com/Sidnahar04/Food-and-Drinking-Places-Service-industry-Analysis/assets/68987629/eb841483-9f01-436e-8168-99fdff48b04c)
 
 Interpretations
+
 •	Operating Expenses: Quebec seems to have the highest operating expenses throughout the years listed (2012-2022), with a significant decrease in 2020 (23.11%) compared to 2019 (31.42%). Ontario and Alberta follow with consistently lower operating expenses throughout the period.
+
 •	Operating Revenue: British Columbia seems to have the highest operating revenue throughout most of the years listed, with a significant increase in 2020 (35.68%) compared to 2019 (25.33%). Ontario and Alberta have consistently lower operating revenue compared to British Columbia.
+
 •	Salaries, Wages, Commissions and Benefits: Ontario has the highest contribution to salaries, wages, commissions and benefits throughout most of the years listed, though Alberta is close behind. Quebec seems to have had a significant drop in 2020 (16.11%) compared to 2019 (20.01%).
 
 ## Model Deployment
 
-1.	Preparation of the Model: 
-    •	Train and optimize your linear regression model using the desired dataset. 
+1.	Preparation of the Model:
+   
+    •	Train and optimize your linear regression model using the desired dataset.
+  	
     •	Serialize the trained model using a library pickle to save it to disk.
+  	
 2.	Set Up Flask Application:
+   
     •	Create a new directory for your Flask application.
+  	
     •	Set up the basic structure of your Flask app, including creating an app.py file for your application logic.
+  	
 3.	Creating Flask Routes:
+
     •	Define routes in your Flask app to handle requests from clients.
+  	
     •	Create a route for model inference where input data is sent to the model for prediction.
+  	
 4.	Load the Model:
     •	Load the trained linear regression model into your Flask application.
+  	
     •	You can load the model in the Flask application startup or within the route where it's needed.
+  	
 5.	Parse Input Data:
+   
     •	Parse the input data sent from the client within the Flask route.
+  	
     •	Ensure that the input data is in the correct format expected by the model.
-6.	Perform Prediction:  
-    •	Use the loaded model to perform predictions on the input data.  
+  	
+6.	Perform Prediction:
+
+    •	Use the loaded model to perform predictions on the input data.
+  	
     •	Pass the input data to the model and obtain the predicted output.
 7.	Return Predictions:
+
     •	Return the predicted output to the client as a response to the request.
+  	
     •	Format the response in JSON or any other appropriate format.
 8.	Run the Flask App:
+   
     •	Run the Flask application using the Flask development server and running it on local machine.
 
 #### Web Application Flow
@@ -115,7 +130,9 @@ Interpretations
 ## Tools & Technologies Used
 
 Power BI: Used for data visualization and creating interactive dashboards to present machine learning insights.
+
 Python: Utilized for data preprocessing, model development, evaluation, and integration with machine learning libraries of scikit-learn.
+
 Flask: Employed for deploying machine learning models as web services or APIs, facilitating real-time predictions and integration with web and mobile applications.
 
 
