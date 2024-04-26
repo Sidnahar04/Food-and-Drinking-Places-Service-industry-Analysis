@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles/mainpage.css">
+</head>
+
+<body>
+    <h1 style="position: absolute;margin-left: 34%;">Predicting Food And Restaurant Business</h1>
+    <form class="form" method="post" action="/predict">
+        <label for="feature1">Year:</label>
+        <input type="text" id="feature1" name="feature1" required>
+        <br>
+        <label for="feature2">Location/GEO:</label>
+        <select class="featureselection" name="feature2" id="feature2">
+            <option value="0|Canada">Canada</option>
+            <option value="1|Newfoundland and Labrador">Newfoundland and Labrador</option>
+            <option value="2|Prince Edward Island">Prince Edward Island</option>
+            <option value="3|Nova Scotia">Nova Scotia</option>
+            <option value="4|New Brunswick">New Brunswick</option>
+            <option value="5|Quebec">Quebec</option>
+            <option value="6|Ontario">Ontario</option>
+            <option value="7|Manitoba">Manitoba</option>
+            <option value="8|Saskatchewan">Saskatchewan</option>
+            <option value="9|Alberta">Alberta</option>
+            <option value="10|British Columbia">British Columbia</option>
+            <option value="11|Northwest Territories">Northwest Territories</option>
+            <option value="12|Nunavut">Nunavut</option>
+            <option value="13|Yukon">Yukon</option>
+        </select>
+        <br>
+        <label for="feature3">Type of Business:</label>
+        <select class="featureselection" name="feature3" id="feature3">
+            <option value="0|Special food services">Special food services</option>
+            <option value="1|Drinking places (alcoholic beverages)">Drinking places (alcoholic beverages)</option>
+            <option value="2|Full-service restaurants">Full-service restaurants</option>
+            <option value="3|Limited-service eating places">Limited-service eating places</option>
+            <option value="4|Food services and drinking places">Food services and drinking places</option>
+        </select>
+        <br>
+        <label for="feature4">Financial metrics:</label>
+        <select class="featureselection" name="feature4" id="feature4">
+            <option value="0|Operating expenses">Operating expenses</option>
+            <option value="1|Salaries, wages, commissions and benefits">Salaries, wages, commissions and benefits
+            </option>
+            <option value="2|Operating revenue">Operating revenue</option>
+            <option value="3|Operating profit margin">Operating profit margin</option>
+        </select>
+        <br>
+        <button class="button" type="submit">Predict</button>
+    </form>
+    <div class="results">
+        {% if prediction %}
+        <p>Prediction: {{ prediction[0] }} million</p>
+        <p>Features Selected: {{ prediction[1] }}</p>
+        {% else %}
+        <p>No predictions available</p>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
