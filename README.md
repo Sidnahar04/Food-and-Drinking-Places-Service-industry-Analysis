@@ -78,6 +78,42 @@ Interpretations
 
 •	Salaries, Wages, Commissions and Benefits: Ontario has the highest contribution to salaries, wages, commissions and benefits throughout most of the years listed, though Alberta is close behind. Quebec seems to have had a significant drop in 2020 (16.11%) compared to 2019 (20.01%).
 
+Running Algorithm
+
+![image](https://github.com/Sidnahar04/Food-and-Drinking-Places-Service-industry-Analysis/assets/68987629/0443c642-3420-4626-9af5-ffb70228b758)
+
+Linear regression is a statistical method that models the relationship between a dependent variable (target output) and one or more independent variables (input features) by fitting a linear equation to observed data. 
+
+Model Evaluation Results
+
+Residual Histogram
+
+ ![image](https://github.com/Sidnahar04/Food-and-Drinking-Places-Service-industry-Analysis/assets/68987629/0b74ab97-814a-4817-bbc1-1fef9e8100c5)
+
+Interpretations:
+
+•	There is a blue bell-shaped curve centered around the zero on the x-axis, indicating distribution.
+
+•	The scatter plot likely represents a regression model’s performance.
+
+•	The bell-shaped curve suggests that the model’s predictions follow a normal distribution around the actual test values.
+
+•	The taller histogram bar at the center indicates that the model’s predictions are most accurate around that region.
+
+•	The horizontal lines of points along the y-axis correspond to consistent predictions for specific test value ranges.
+
+![image](https://github.com/Sidnahar04/Food-and-Drinking-Places-Service-industry-Analysis/assets/68987629/c6d57565-d1c7-40a9-8359-d69843c8ceef)
+
+RMSE (Root Mean Squared Error): RMSE is a measure of the differences between values predicted by a model and the observed values. It represents the square root of the average squared differences between the predicted and actual values. A lower RMSE indicates better predictive performance.
+
+MAE (Mean Absolute Error): MAE measures the average absolute differences between the predicted and actual values. It indicates the magnitude of errors in the predictions. Like RMSE, a lower MAE indicates better performance.
+
+MSE (Mean Squared Error): MSE is the average of the squares of the errors between the predicted and actual values. It amplifies larger errors more than smaller ones. As with RMSE and MAE, a lower MSE signifies better predictive accuracy.
+
+Lower MAE, MSE, and RMSE values indicate better predictive accuracy, suggesting the model's predictions are closer to the actual values on average.
+
+
+
 ## Model Deployment
 
 1.	Preparation of the Model:
